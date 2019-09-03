@@ -1,0 +1,11 @@
+# [VF6]3-,MS=0,1.9896,tripletNOCI
+E,Eshifted,DoS,Comment
+# A, Adash, Addash | E - a3T1g - M_S = 0
+-1539.3445628,-344.5628,3,a3T1gA
+-1539.3433740,-343.3740,3,a3T1gAdash
+-1539.3372071,-337.2071,3,a3T1gAddash
+# B, C - 3T2g - M_S = 0
+-1539.2847593,-284.7593,3,3T2gB
+-1539.2868717,-286.8717,3,3T2gC
+# E | A, Adash, Addash - b3T1g - M_S = 0
+-1539.2374281,-237.4281,3,b3T1gE

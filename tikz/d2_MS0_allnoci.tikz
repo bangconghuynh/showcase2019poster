@@ -65,13 +65,13 @@
 			\draw[Gray!60!Black!60!Black, densely dotted, thin] (axis cs:7.6,-1539.3080469) -- (Adash);
 			\node[Gray!60!Black!60!Black, anchor = west, inner sep = 3pt] (Adashsym) at ($(Adash.west) + (1.7cm,0)$) {\scriptsize $2T_{1g} \oplus 2T_{2g}$};
 			\draw[->, Gray!60!Black!60!Black, thin, densely dotted] (Adash) -- (Adashsym);
-			% A Adash continuation auxiliary axis
-			\draw[thin, densely dotted] (axis cs:6.0,-1539.312) -- (axis cs:6.5,-1539.312);
-			\draw[thin] (axis cs:6.5,-1539.312) -- (axis cs:9,-1539.312);
-			\draw[thin] (axis cs:7.5,-1539.312) -- (axis cs:7.5,-1539.313);
-			\draw[thin] (axis cs:9,-1539.312) -- (axis cs:9,-1539.313);
-			\node[anchor = north, inner sep = 1pt] at (axis cs:7.5,-1539.313) {\tiny $12$};
-			\node[anchor = north, inner sep = 1pt] at (axis cs:9,-1539.313) {\tiny $24$};
+			% A Adash continuation axiliary axis
+			\draw[thin, densely dotted] (axis cs:6.0,-1539.351) -- (axis cs:6.5,-1539.351);
+			\draw[thin] (axis cs:6.5,-1539.351) -- (axis cs:9,-1539.351);
+			\draw[thin] (axis cs:7.5,-1539.351) -- (axis cs:7.5,-1539.352);
+			\draw[thin] (axis cs:9,-1539.351) -- (axis cs:9,-1539.352);
+			\node[anchor = north, inner sep = 1pt] at (axis cs:7.5,-1539.352) {\tiny $12$};
+			\node[anchor = north, inner sep = 1pt] at (axis cs:9,-1539.352) {\tiny $24$};
 			% Addash
 			\node[draw, Gray!60!Black!60!Black, densely dotted, anchor = west, inner sep = 3pt] (Addash) at (axis cs:7,-1539.30) {\scriptsize $\mathrm{A}''_0$};
 			\draw[Gray!60!Black!60!Black, densely dotted, thin] (axis cs:6.1,-1539.3062026) -- (Addash);
@@ -131,77 +131,66 @@
 			%% NOCI
 			%% Triplets
 			%%
-			% 3T1g[A,Adash,Addash]
-			\node[anchor = west, inner sep = 3pt] (3T1gAAdashAddash) at (axis cs:7,-1539.353) {\scriptsize $\prescript{3}{}{T}_{1g}[\mathrm{A}_0, \mathrm{A}'_0, \mathrm{A}''_0]$};
-			% 3T1g[A]
-			\draw[thin, ->] (axis cs:3.1,-1539.3445628) -- ($(3T1gAAdashAddash.north west)$);
-			% 3T1g[Adash]
-			\draw[thin, ->] (axis cs:3.1,-1539.3433740) -- ($(3T1gAAdashAddash.north west)$);
 			% 3T1g[Addash]
-			\draw[thin, ->] (axis cs:3.1,-1539.3372071) -- ($(3T1gAAdashAddash.north west)$);
-			% 3T1g[A+Adash]
-			\draw[thin, ->] (axis cs:3.1,-1539.3448695) -- ($(3T1gAAdashAddash.north west)$);
-			% 3T1g[A+Addash]
-			\draw[thin, ->] (axis cs:3.1,-1539.3447589) -- ($(3T1gAAdashAddash.north west)$);
-			% 3T1g[Adash+Addash]
-			\draw[thin, ->] (axis cs:3.1,-1539.3434856) -- ($(3T1gAAdashAddash.north west)$);
-			% 3T1g[A+Adash+Addash]
-			\draw[thin, ->] (axis cs:3.1,-1539.3448808) -- ($(3T1gAAdashAddash.north west)$);
+			\node[anchor = west, inner sep = 3pt] (3T1gAddash) at (axis cs:7,-1539.331) {\footnotesize $\prescript{3}{}{T}_{1g}[\mathrm{A}''_0]$};
+			\draw[thin, ->] (axis cs:3.1,-1539.3372071) -- ($(3T1gAddash.west)$);
+			% 3T1g[A]
+			\node[anchor = west, inner sep = 3pt] (3T1gA) at (axis cs:7,-1539.347) {\footnotesize $\prescript{3}{}{T}_{1g}[\mathrm{A}_0]$};
+			\draw[thin, ->] (axis cs:3.1,-1539.3445628) -- ($(3T1gA.west)$);
+			% 3T1g[A']
+			\node[anchor = west, inner sep = 3pt] (3T1gAdash) at (axis cs:7,-1539.3408) {\footnotesize $\prescript{3}{}{T}_{1g}[\mathrm{A}'_0]$};
+			\draw[thin, ->] (axis cs:3.1,-1539.3433740) -- ($(3T1gAdash.west)$);
 			%%
-			% 3T2g[B,C]
-			\node[anchor = west, inner sep = 3pt] (3T2gBC) at (axis cs:7,-1539.293) {\scriptsize $\prescript{3}{}{T}_{2g}[\mathrm{B}_0, \mathrm{C}_0]$};
 			% 3T2g[B]
-			\draw[thin, ->] (axis cs:3.1,-1539.2847593) -- ($(3T2gBC.north west)$);
+			\node[anchor = west, inner sep = 3pt] (3T2gB) at (axis cs:7,-1539.288) {\footnotesize $\prescript{3}{}{T}_{2g}[\mathrm{B}_0]$};
+			\draw[thin, ->] (axis cs:3.1,-1539.2847593) -- ($(3T2gB.west)$);
 			% 3T2g[C]
-			\draw[thin, ->] (axis cs:3.1,-1539.2868717) -- ($(3T2gBC.north west)$);
-			% 3T2g[B+C]
-			\draw[thin, ->] (axis cs:3.1,-1539.2890629) -- ($(3T2gBC.north west)$);
+			\node[anchor = west, inner sep = 3pt] (3T2gC) at (axis cs:7,-1539.294) {\footnotesize $\prescript{3}{}{T}_{2g}[\mathrm{C}_0]$};
+			\draw[thin, ->] (axis cs:3.1,-1539.2868717) -- ($(3T2gC.west)$);
 			%%
 			% 3T1g[E]
-			\node[anchor = west, inner sep = 3pt] (3T1gE) at (axis cs:7,-1539.232) {\scriptsize $\prescript{3}{}{T}_{1g}[\mathrm{E}_0]$};
+			\node[anchor = west, inner sep = 3pt] (3T1gE) at (axis cs:7,-1539.233) {\footnotesize $\prescript{3}{}{T}_{1g}[\mathrm{E}_0]$};
 			\draw[thin, ->] (axis cs:3.1,-1539.2374281) -- ($(3T1gE.west)$);
 			%%
 			%%
 			%% Singlets
-			% 1T2g[A,Adash,Addash]
-			\node[anchor = west, inner sep = 3pt] (1T2gAAdashAddash) at (axis cs:7,-1539.286) {\scriptsize $\prescript{1}{}{T}_{2g}[\mathrm{A}_0, \mathrm{A}'_0, \mathrm{A}''_0]$};
 			% 1T2g[A]
-			\draw[thin, ->] (axis cs:3.1,-1539.2803723) -- ($(1T2gAAdashAddash.north west)$);
-			% 1T2g[Adash]
-			\draw[thin, ->] (axis cs:3.1,-1539.2791715) -- ($(1T2gAAdashAddash.north west)$);
-			% 1T2g[Addash]
-			\draw[thin, ->] (axis cs:3.1,-1539.2751980) -- ($(1T2gAAdashAddash.north west)$);
-			% 1T2g[A+Adash]
-			\draw[thin, ->] (axis cs:3.1,-1539.2803724) -- ($(1T2gAAdashAddash.north west)$);
-			% 1T2g[A+Addash]
-			\draw[thin, ->] (axis cs:3.1,-1539.2804345) -- ($(1T2gAAdashAddash.north west)$);
-			% 1T2g[Adash+Addash]
-			\draw[thin, ->] (axis cs:3.1,-1539.2792889) -- ($(1T2gAAdashAddash.north west)$);
-			% 1T2g[A+Adash+Addash]
-			\draw[thin, ->] (axis cs:3.1,-1539.2804618) -- ($(1T2gAAdashAddash.north west)$);
+			\node[anchor = east, inner sep = 3pt] (1T2gA) at (axis cs:-1.6,-1539.292) {\footnotesize $\prescript{1}{}{T}_{2g}[\mathrm{A}_0]$};
+			\draw[thin, ->] (axis cs:-0.1,-1539.2803723) -- ($(1T2gA.east)$);
+			% 1T2g[A']
+			\node[anchor = east, inner sep = 3pt] (1T2gAdash) at (axis cs:-1.6,-1539.286) {\footnotesize $\prescript{1}{}{T}_{2g}[\mathrm{A}'_0]$};
+			\draw[thin, ->] (axis cs:-0.1,-1539.2791715) -- ($(1T2gAdash.east)$);
+			% 1T2g[A'']
+			\node[anchor = east, inner sep = 3pt] (1T2gAddash) at (axis cs:-1.6,-1539.269) {\footnotesize $\prescript{1}{}{T}_{2g}[\mathrm{A}''_0]$};
+			\draw[thin, ->] (axis cs:-0.1,-1539.2751980) -- ($(1T2gAddash.east)$);
 			%%
-			% 1Eg[A,B,D]
-			\node[anchor = west, inner sep = 3pt] (1EgABD) at (axis cs:7,-1539.27) {\scriptsize $\prescript{1}{}{E}_{g}[\mathrm{A}_0, \mathrm{B}_0, \mathrm{D}_0]$};
+			%%
 			% 1Eg[A]
-			\draw[thin, ->] (axis cs:2.1,-1539.2770923) -- ($(1EgABD.west)$);
+			\node[anchor = west, inner sep = 3pt] (1EgA) at (axis cs:7,-1539.280) {\footnotesize $\prescript{1}{}{E}_{g}[\mathrm{A}_0]$};
+			\draw[thin, ->] (axis cs:2.1,-1539.2770923) -- ($(1EgA.west)$);
 			% 1Eg[B]
-			\draw[thin, ->] (axis cs:2.1,-1539.2735656) -- ($(1EgABD.west)$);
+			\node[anchor = west, inner sep = 3pt] (1EgB) at (axis cs:7,-1539.267) {\footnotesize $\prescript{1}{}{E}_{g}[\mathrm{B}_0]$};
+			\draw[thin, ->] (axis cs:2.1,-1539.2735656) -- ($(1EgB.west)$);
 			% 1Eg[D]
-			\draw[thin, ->] (axis cs:2.1,-1539.2742054) -- ($(1EgABD.west)$);
-			% 1Eg[B+D]
-			\draw[thin, ->] (axis cs:2.1,-1539.2781317) -- ($(1EgABD.west)$);
-			% 1Eg[A+D]
-			\draw[thin, ->] (axis cs:2.1,-1539.2785202) -- ($(1EgABD.west)$);
-			% 1Eg[A+B]
-			\draw[thin, ->] (axis cs:2.1,-1539.2816837) -- ($(1EgABD.west)$);
+			\node[anchor = west, inner sep = 3pt] (1EgD) at (axis cs:7,-1539.272) {\footnotesize $\prescript{1}{}{E}_{g}[\mathrm{D}_0]$};
+			\draw[thin, ->] (axis cs:2.1,-1539.2742054) -- ($(1EgD.west)$);
+			%%
 			%%
 			% 1T2g[C]
-			\node[anchor = west, inner sep = 3pt] (1T2gC) at (axis cs:7,-1539.216) {\scriptsize $\prescript{1}{}{T}_{2g}[\mathrm{C}_0]$};
+			\node[anchor = west, inner sep = 3pt] (1T2gC) at (axis cs:7,-1539.216) {\footnotesize $\prescript{1}{}{T}_{2g}[\mathrm{C}_0]$};
 			\draw[thin, ->] (axis cs:3.1,-1539.2189019) -- ($(1T2gC.west)$);
 			%%
 			% 1T1g[E]
-			\node[anchor = west, inner sep = 3pt] (1T1gE) at (axis cs:7,-1539.207) {\scriptsize $\prescript{1}{}{T}_{1g}[\mathrm{E}_0]$};
+			\node[anchor = west, inner sep = 3pt] (1T1gE) at (axis cs:7,-1539.197) {\footnotesize $\prescript{1}{}{T}_{1g}[\mathrm{E}_0]$};
 			\draw[thin, ->] (axis cs:3.1,-1539.2034665) -- ($(1T1gE.west)$);
+			%%
+			% 1A1g[B]
+			\node[anchor = west, inner sep = 3pt] (1A1gB) at (axis cs:7,-1539.207) {\footnotesize $\prescript{1}{}{A}_{1g}[\mathrm{B}_0]$};
+			\draw[thin, ->] (axis cs:1.1,-1539.2165102) -- ($(1A1gB.west)$);
+			%%
+%			% 1A1g[D]
+%			\node[anchor = west, inner sep = 3pt] (1A1gD) at (axis cs:7,-1539.188) {\footnotesize $\prescript{1}{}{A}_{1g}[\mathrm{D}_0]$};
+%			\draw[thin, ->] (axis cs:1.1,-1539.1836669) -- ($(1A1gD.west)$);
 		}
 	]
 		\addplot+[
@@ -215,12 +204,12 @@
 			DarkCyan,
 			thin
 		]
-			table[x={DoS}, y={E}, col sep=comma]{plots/MS0/VF63-.0.1.9896.UHF.6-31GSTAR.allnocitriplet.dos.csv};
+			table[x={DoS}, y={E}, col sep=comma]{plots/MS0/VF63-.0.1.9896.UHF.6-31GSTAR.singlenocitriplet.dos.csv};
 		\addplot+[
 			mark = none,
 			Magenta,
 			thin
 		]
-			table[x={DoS}, y={E}, col sep=comma]{plots/MS0/VF63-.0.1.9896.UHF.6-31GSTAR.allnocisinglet.dos.csv};
+			table[x={DoS}, y={E}, col sep=comma]{plots/MS0/VF63-.0.1.9896.UHF.6-31GSTAR.singlenocisinglet.dos.csv};
 	\end{axis}
 \end{tikzpicture}
