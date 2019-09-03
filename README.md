@@ -1,7 +1,7 @@
-# mqm2019poster
-Poster title: *Exploiting Multiple Symmetry-Broken SCF Solutions to Describe Ground and Excited States of Transition-Metal Complexes*
+# showcase2019poster
+Poster title: *Symmetry and Correlation in Multiple Self-Consistent-Field Solutions of Transition-Metal Complexes*
 
-Poster presented at MQM 2019 in Heidelberg, Germany.
+Poster presented at Showcase Week 2019, Department of Chemistry, University of Cambridge.
 
 ## Compilation
 The required packages and libraries should be obvious from the preamble. But in particular:
