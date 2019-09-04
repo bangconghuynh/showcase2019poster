@@ -1,7 +1,7 @@
 \pgfplotstableread[col sep=comma]{plots/JT/AAdash.JT.Egu.minimal.csv}\Egu
 \pgfplotstableread[col sep=comma]{plots/JT/AAdash.JT.Egv.minimal.csv}\Egv
 \newlength{\vibmodesize}
-\setlength{\vibmodesize}{1.5cm}
+\setlength{\vibmodesize}{1.8cm}
 \begin{tikzpicture}
 	% Main plot
 	\begin{groupplot}[
@@ -109,25 +109,25 @@
 				%%
 				%% Vib mode
 				%%
-				\coordinate (octmol) at (axis cs:0,-33.9);
-				\draw ($(octmol) - (0,0.5\vibmodesize)$) -- ($(octmol) + (0,0.5\vibmodesize)$);
-				\draw ($(octmol) + (-0.458\vibmodesize,0.2\vibmodesize)$) -- ($(octmol) + (0.458\vibmodesize,-0.2\vibmodesize)$);
-				\draw ($(octmol) + (0.458\vibmodesize,0.2\vibmodesize)$) -- ($(octmol) + (-0.458\vibmodesize,-0.2\vibmodesize)$);
-				\node[draw, shape=circle, fill=gray, scale=0.2] (top) at ($(octmol) + (0,0.5\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=gray, scale=0.2] (bottom) at ($(octmol) - (0,0.5\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=gray, scale=0.2] (topleft) at ($(octmol) + (-0.458\vibmodesize,0.2\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=gray, scale=0.2] (bottomleft) at ($(octmol) + (-0.458\vibmodesize,-0.2\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=gray, scale=0.2] (topright) at ($(octmol) + (0.458\vibmodesize,0.2\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=gray, scale=0.2] (bottomright) at ($(octmol) + (0.458\vibmodesize,-0.2\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=black, scale=0.3] (centre) at (octmol) {};
-				\draw[->] ($1.1*(bottomright) - 0.1*(topleft)$) -- ($1.25*(bottomright) - 0.25*(topleft)$);
-				\draw[->] ($1.1*(topleft) - 0.1*(bottomright)$) -- ($1.25*(topleft) - 0.25*(bottomright)$);
-				\draw[->] ($1.1*(bottomleft) - 0.1*(topright)$) -- ($1.25*(bottomleft) - 0.25*(topright)$);
-				\draw[->] ($1.1*(topright) - 0.1*(bottomleft)$) -- ($1.25*(topright) - 0.25*(bottomleft)$);
-				\draw[->] ($1.4*(top) - 0.4*(bottom)$) -- ($1.1*(top) - 0.1*(bottom)$);
-				\draw[->] ($1.4*(bottom) - 0.4*(top)$) -- ($1.1*(bottom) - 0.1*(top)$);
-				\node[anchor = south west, inner sep = 1pt] (S2) at ($(topright) + (0.1\vibmodesize,0.1\vibmodesize)$) {\tiny $S_2$};
-				\node[anchor = north west, inner sep = 1pt] (S2) at ($(bottom) + (0.1\vibmodesize,-0.2\vibmodesize)$) {\tiny $2S_2$};
+				\coordinate (octmolEgu) at (axis cs:0,-33.9);
+				\draw ($(octmolEgu) - (0,0.5\vibmodesize)$) -- ($(octmolEgu) + (0,0.5\vibmodesize)$);
+				\draw ($(octmolEgu) + (-0.458\vibmodesize,0.2\vibmodesize)$) -- ($(octmolEgu) + (0.458\vibmodesize,-0.2\vibmodesize)$);
+				\draw ($(octmolEgu) + (0.458\vibmodesize,0.2\vibmodesize)$) -- ($(octmolEgu) + (-0.458\vibmodesize,-0.2\vibmodesize)$);
+				\node[draw, shape=circle, fill=gray, scale=0.2] (top) at ($(octmolEgu) + (0,0.5\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=gray, scale=0.2] (bottom) at ($(octmolEgu) - (0,0.5\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=gray, scale=0.2] (topleft) at ($(octmolEgu) + (-0.458\vibmodesize,0.2\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=gray, scale=0.2] (bottomleft) at ($(octmolEgu) + (-0.458\vibmodesize,-0.2\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=gray, scale=0.2] (topright) at ($(octmolEgu) + (0.458\vibmodesize,0.2\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=gray, scale=0.2] (bottomright) at ($(octmolEgu) + (0.458\vibmodesize,-0.2\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=black, scale=0.3] (centre) at (octmolEgu) {};
+				\draw[->, very thick] (bottomright) -- ($1.2*(bottomright) - 0.2*(topleft)$);
+				\draw[->, very thick] (topleft) -- ($1.2*(topleft) - 0.2*(bottomright)$);
+				\draw[->, very thick] (bottomleft) -- ($1.2*(bottomleft) - 0.2*(topright)$);
+				\draw[->, very thick] (topright) -- ($1.2*(topright) - 0.2*(bottomleft)$);
+				\draw[->, very thick] (top) -- ($0.7*(top) + 0.3*(bottom)$);
+				\draw[->, very thick] (bottom) -- ($0.7*(bottom) + 0.3*(top)$);
+				\node[anchor = south west, inner sep = 1pt, scale = 0.5] (S2) at ($(topright) + (0.14\vibmodesize,0.14\vibmodesize)$) {$S_2$};
+				\node[anchor = north west, inner sep = 1pt, scale = 0.5] (2S2) at ($(bottom) + (0.08\vibmodesize,0.2\vibmodesize)$) {$2S_2$};
 			},
 		]	
 			\foreach \noci in {Egshifted,A2gshifted}{
@@ -185,22 +185,22 @@
 				%%
 				%% Vib mode
 				%%
-				\coordinate (octmol) at (axis cs:0,-33.9);
-				\draw ($(octmol) - (0,0.5\vibmodesize)$) -- ($(octmol) + (0,0.5\vibmodesize)$);
-				\draw ($(octmol) + (-0.458\vibmodesize,0.2\vibmodesize)$) -- ($(octmol) + (0.458\vibmodesize,-0.2\vibmodesize)$);
-				\draw ($(octmol) + (0.458\vibmodesize,0.2\vibmodesize)$) -- ($(octmol) + (-0.458\vibmodesize,-0.2\vibmodesize)$);
-				\node[draw, shape=circle, fill=gray, scale=0.2] (top) at ($(octmol) + (0,0.5\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=gray, scale=0.2] (bottom) at ($(octmol) - (0,0.5\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=gray, scale=0.2] (topleft) at ($(octmol) + (-0.458\vibmodesize,0.2\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=gray, scale=0.2] (bottomleft) at ($(octmol) + (-0.458\vibmodesize,-0.2\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=gray, scale=0.2] (topright) at ($(octmol) + (0.458\vibmodesize,0.2\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=gray, scale=0.2] (bottomright) at ($(octmol) + (0.458\vibmodesize,-0.2\vibmodesize)$) {};
-				\node[draw, shape=circle, fill=black, scale=0.3] (centre) at (octmol) {};
-				\draw[<-] ($1.1*(bottomright) - 0.1*(topleft)$) -- ($1.25*(bottomright) - 0.25*(topleft)$);
-				\draw[<-] ($1.1*(topleft) - 0.1*(bottomright)$) -- ($1.25*(topleft) - 0.25*(bottomright)$);
-				\draw[->] ($1.1*(bottomleft) - 0.1*(topright)$) -- ($1.25*(bottomleft) - 0.25*(topright)$);
-				\draw[->] ($1.1*(topright) - 0.1*(bottomleft)$) -- ($1.25*(topright) - 0.25*(bottomleft)$);
-				\node[anchor = south west, inner sep = 1pt] (S2) at ($(topright) + (0.1\vibmodesize,0.1\vibmodesize)$) {\tiny $S_3$};
+				\coordinate (octmolEgv) at (axis cs:0,-33.9);
+				\draw ($(octmolEgv) - (0,0.5\vibmodesize)$) -- ($(octmolEgv) + (0,0.5\vibmodesize)$);
+				\draw ($(octmolEgv) + (-0.458\vibmodesize,0.2\vibmodesize)$) -- ($(octmolEgv) + (0.458\vibmodesize,-0.2\vibmodesize)$);
+				\draw ($(octmolEgv) + (0.458\vibmodesize,0.2\vibmodesize)$) -- ($(octmolEgv) + (-0.458\vibmodesize,-0.2\vibmodesize)$);
+				\node[draw, shape=circle, fill=gray, scale=0.2] (top) at ($(octmolEgv) + (0,0.5\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=gray, scale=0.2] (bottom) at ($(octmolEgv) - (0,0.5\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=gray, scale=0.2] (topleft) at ($(octmolEgv) + (-0.458\vibmodesize,0.2\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=gray, scale=0.2] (bottomleft) at ($(octmolEgv) + (-0.458\vibmodesize,-0.2\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=gray, scale=0.2] (topright) at ($(octmolEgv) + (0.458\vibmodesize,0.2\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=gray, scale=0.2] (bottomright) at ($(octmolEgv) + (0.458\vibmodesize,-0.2\vibmodesize)$) {};
+				\node[draw, shape=circle, fill=black, scale=0.3] (centre) at (octmolEgv) {};
+				\draw[->, very thick] (bottomright) -- ($0.8*(bottomright) + 0.2*(topleft)$);
+				\draw[->, very thick] (topleft) -- ($0.8*(topleft) + 0.2*(bottomright)$);
+				\draw[->, very thick] (bottomleft) -- ($1.2*(bottomleft) - 0.2*(topright)$);
+				\draw[->, very thick] (topright) -- ($1.2*(topright) - 0.2*(bottomleft)$);
+				\node[anchor = south west, inner sep = 1pt, scale = 0.5] (S3) at ($(topright) + (0.14\vibmodesize,0.14\vibmodesize)$) {$S_3$};
 			}
 		]	
 			\foreach \noci in {B2gshifted,B1gshifted,B3gshifted}{

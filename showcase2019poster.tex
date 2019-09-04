@@ -148,9 +148,9 @@
 % Title
 % ====================
 
-\title{Exploiting Multiple Symmetry-Broken SCF Solutions\\ to Describe Ground and Excited States of\\ Transition-Metal Complexes}
+\title{Symmetry and Correlation in\\ Multiple Self-Consistent-Field Solutions\\ of Transition-Metal Complexes}
 
-\author{Bang C. Huynh\inst{1} \and Alex J. W. Thom\inst{1}}
+\author{Huynh, Bang C.\inst{1} \and Thom, Alex J. W.\inst{1}}
 
 \institute[Chemistry, Cambridge, UK]{\inst{1} Department of Chemistry, University of Cambridge, United Kingdom}
 
@@ -169,18 +169,18 @@
 			\begin{figure}
 				\begin{subfigure}[t]{0.49\textwidth}
 					\centering
-					\useexternalfile{d2_MS1_allnoci}
+					\useexternalfile{d2_MS1_singlenoci}
 				\end{subfigure}
 				\hfill
 				\begin{subfigure}[t]{0.49\textwidth}
 					\centering
-					\useexternalfile{d2_MS0_allnoci}
+					\useexternalfile{d2_MS0_singlenoci}
 				\end{subfigure}
 				\captionsetup{justification=centering}
 				\caption{
 					Energy and symmetry of low-lying UHF solutions and NOCI wavefunctions constructed from them in octahedral \ce{[VF6]^3-}.\\[6pt]
 					\footnotesize \tikz[baseline]{\node[draw, Gray!60!Black, inner sep = 3pt, anchor = base] {$\mathrm{S}_{M_S}$};}: symmetry-conserved UHF set $\mathrm{S}$ with $\hat{S}_z$ eigenvalue $M_S$. \tikz[baseline]{\node[draw, Gray!60!Black, densely dotted, inner sep = 3pt, anchor = base] {$\mathrm{S}_{M_S}$};}: spatial or spin symmetry-broken UHF set $\mathrm{S}$ with $\hat{S}_z$ eigenvalue $M_S$.\\[6pt]
-					\footnotesize  $\Gamma[\mathrm{A}\oplus\mathrm{B}\oplus\mathrm{C}]$: a specific NOCI set of symmetry $\Gamma$ constructed from all of $\mathrm{A}$, $\mathrm{B}$, and $\mathrm{C}$. $\Gamma[\mathrm{A}, \mathrm{B}, \mathrm{C}]$: multiple NOCI sets of symmetry $\Gamma$ constructed from all non-trivial combinations of $\mathrm{A}$, $\mathrm{B}$, and $\mathrm{C}$.
+					\footnotesize  $\Gamma[\mathrm{S}_{M_S}]$: a specific NOCI set of symmetry $\Gamma$ constructed from UHF set $\mathrm{S}$ with $\hat{S}_z$ eigenvalue $M_S$.
 				}
 				\label{fig:d2_allnoci}
 			\end{figure}
@@ -293,7 +293,6 @@
 		\end{block}
 		
 		\begin{block}{Solution Topology: Euclidean Realisation of State Distances}
-			% Interpreting state distances as Euclidean distances, 
 			By realising the distance matrices between symmetry-broken HF solutions to give \textbf{\color{Blue} polytopes} showing their \textbf{\color{red} arrangements in Euclidean space} (\cref{fig:AAdashpolytopes}), we hope to gain insight into the nature of their symmetry breaking.
 			
 			\begin{figure}
