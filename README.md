@@ -4,17 +4,17 @@ Poster title: *Symmetry and Correlation in Multiple Self-Consistent-Field Soluti
 Poster presented at Showcase Week 2019, Department of Chemistry, University of Cambridge.
 
 ## Compilation
-The required packages and libraries should be obvious from the preamble. But in particular:
-  * `lualatex` with `-shell-escape` and ` PGFPLOTS 1.16` are required to compile the main TeX document and the `TikZ` and `PGFPLOTS` figures, especially since the farily new `luamath` PGF library is used to perform some axis scaling (see [here](https://tex.stackexchange.com/questions/333633/lua-reimplementations-of-pgf-math));
-  * `biber` is required to compile the References (not that there are a lot of complicated references in this poster, but it's nice to use something that offers a bit more control and better handling of any potential complicated stuff).
- 
-`texlive 2019` as-is should contain all of the required packages and libraries. The latest packages updated via `MiKTeX` by June 2019 should do the job too.
+- The default compilation mode uses `tikzexternalize` via `lualatex` with `--shell-escape`, together with the `fontspec` and `PGFPLOTS 1.16` packages to handle fonts and generate diagrams and graphs.\
+To compile in this mode, run
+  ```
+  make cleanall
+  ```
+  to clean all auxiliary files and precompiled figures, followed by
+  ```
+  make all
+  ```
 
-Note that `tikzexternalize` is used in this document to generate the aforementioned figures. All figures have thus been precompiled, so if one wants to avoid recompiling them, please make sure that the boolean `\tikzex` is set to `false`, i.e., comment out `\tikzextrue` and uncomment `\tikzexfalse` in the preamble:
-```
-%\tikzextrue
-\tikzexfalse
-```
+- As `fontspec` is used, it is not possible to compile with `pdflatex`.
 
 ## Acknowledgement
 The theme used in this poster is based on the Gemini theme which can be found [here](https://github.com/anishathalye/gemini).
