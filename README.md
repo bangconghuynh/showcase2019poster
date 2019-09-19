@@ -13,6 +13,11 @@ To compile in this mode, run
   ```
   make all
   ```
+  
+- To avoid recompiling the diagrams and graphs, make sure to check out a fresh copy of `master` and then simply run
+  ```
+  make all
+  ```
 
 - As `fontspec` is used, it is not possible to compile with `pdflatex`.
 
