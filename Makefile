@@ -16,7 +16,7 @@ cleanaux:
 	rm -f *.bbl *.blg *.aux *.auxlock *.end *.fls *.log *.out *.fdb_latexmk *.synctex.gz *.nav *.run.xml *.snm
 
 cleantikzoutput:
-	rm -f */tikz/tikzoutput/*
+	rm -f tikz/tikzoutput/*
 
 cleanall: cleanaux cleantikzoutput
 
