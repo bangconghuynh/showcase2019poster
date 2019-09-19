@@ -94,9 +94,13 @@
 
 \tikzexternalize
 
+% \tikzexcmd is defined in the compilation call from the command line. See the Makefile.
 \newif\iftikzex
-\tikzextrue
-%\tikzexfalse
+\ifdefined\notikzex
+  \tikzexfalse
+\else
+  \tikzextrue
+\fi
 
 \iftikzex
 	\pgfplotsset{compat=1.16}
